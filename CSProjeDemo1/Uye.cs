@@ -38,7 +38,17 @@ namespace CSProjeDemo1
 
             return newName;
         }
-
+        public static void UyeyeKitapVer(Kitap secilenKitap)
+        {
+            if (UyeninAldigiKitaplar.Count > 2)
+            {
+                Console.WriteLine("Maksimum miktarda kitap aldınız. Daha fazla kitap alamazsınız.");
+            }
+            else
+            {
+            UyeninAldigiKitaplar.Add(secilenKitap);
+            }
+        }
 
 
     }

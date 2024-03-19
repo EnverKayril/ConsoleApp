@@ -21,6 +21,14 @@ namespace CSProjeDemo1
             MemberName = memberName;
             MemberLastName = memberLastName;
         }
+        public static OduncVerilenKitaplar KitapOduncVer(Kitap secilenKitap, Uye secilenUye)
+        {
+            OduncVerilenKitaplar oduncVerilenKitap = new OduncVerilenKitaplar(secilenKitap.ISBN, secilenKitap.BookName, secilenUye.Id, secilenUye.Name, secilenUye.LastName);
+            secilenKitap.Piece--;
+            return oduncVerilenKitap;
+        }
+        
+        public static OduncVerilenKitaplar KitapIadeAl(Kitap )
 
 
     }

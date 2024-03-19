@@ -79,6 +79,7 @@ namespace CSProjeDemo1
                     "Kitap İadesi almak için [2]\n" +
                     "Ödünç verilen tüm kitapların sorgulaması [3]\n" +
                     "Üye Sorgulama için [4]\n" +
+                    "Üye Listesi için [5]\n" +
                     "Seçim Yapınız: ");
                 try
                 {
@@ -101,18 +102,28 @@ namespace CSProjeDemo1
                 }
                 else if (secim1 == 1)
                 {
-                    oduncVerilenKitaplar.Add( Kutuphane.KitapOduncVer(Kutuphane.KitapSec(kitapListesi), Kutuphane.UyeSec(uyeListesi)));
-                    
+                    oduncVerilenKitaplar.Add( OduncVerilenKitaplar.KitapOduncVer(Kutuphane.KitapSec(kitapListesi), Kutuphane.UyeSec(uyeListesi)));
+                    Uye.UyeyeKitapVer(Kutuphane.KitapSec(kitapListesi));
                 }
+                else if (secim2 == 2)
+                {
 
+                }
 
                 else if (secim1 == 3)
                 {
                     Kutuphane.PrintBorrowedBooks(oduncVerilenKitaplar);
                 }
 
+                else if (secim1 == 5)
+                {
+                    Kutuphane.PrintMember(uyeListesi);
+                }
 
-
+            }
+            foreach (var item in uyeListesi)
+            {
+                foreach (var item2 in item)
             }
             //        Kutuphane.KitapOduncVer(Kutuphane.KitapSec(kitapListesi),Kutuphane.UyeSec(uyeListesi));
 

@@ -13,12 +13,7 @@ namespace CSProjeDemo1
         public List<Kitap> booksList { get; set; }
         public List<Uye> memberList { get; set; }
 
-        public static OduncVerilenKitaplar KitapOduncVer(Kitap secilenKitap,Uye secilenUye)
-        {
-            OduncVerilenKitaplar oduncVerilenKitap = new OduncVerilenKitaplar(secilenKitap.ISBN,secilenKitap.BookName,secilenUye.Id,secilenUye.Name,secilenUye.LastName);
-            secilenKitap.Piece--;
-            return oduncVerilenKitap;
-        }
+
 
         public static Kitap KitapSec(List<Kitap> bookList)
         {
@@ -66,15 +61,6 @@ namespace CSProjeDemo1
                 Console.WriteLine($"{secilenUye.Id,-9}{secilenUye.Name,-15}{secilenUye.LastName,-15}{secilenUye.Age,-9}{secilenUye.Email,-40}");
             }
             return secilenUye;
-        }
-
-        public static void PrindBorrowedBooks(List<Kitap> borrowedList)
-        {
-            Console.WriteLine($"{"ISBN",-9}{"Kitap Adı",-30}{"Yazar",-25}{"Durumu",-20}");
-            foreach (Kitap book in borrowedList)
-            {
-                Console.WriteLine($"{book.ISBN,-9}{book.BookName,-30}{book.Writer,-25}{book.Availability,-20}");
-            }
         }
 
         public static void PrintMember(List<Uye> memberList)
