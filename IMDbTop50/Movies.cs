@@ -17,11 +17,11 @@ namespace IMDbTop50
         {
             if (secim == 1)
             {
-                return @"C:\Users\oscar\source\repos\ConsoleApp\IMDbTop50\bin\Debug\net6.0\Txt\MovieList.txt";
+                return @"C:\Users\oscar\source\repos\EnverKayril\ConsoleApp\IMDbTop50\Txt\MovieList.txt";
             }
             else if (secim == 2)
             {
-                return @"C:\Users\oscar\source\repos\ConsoleApp\IMDbTop50\bin\Debug\net6.0\Txt\WatchedMovies.txt";
+                return @"C:\Users\oscar\source\repos\EnverKayril\ConsoleApp\IMDbTop50\Txt\WatchedMovies.txt";
             }
             else
             {

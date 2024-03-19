@@ -1,0 +1,50 @@
+1- The Shawshank Redemption - Frank Darabont - 9.3
+2- The Godfather - Francis Ford Coppola - 9.2
+3- The Godfather Part II - Francis Ford Coppola - 9.0
+4- The Dark Knight - Christopher Nolan - 9.0
+5- 12 Angry Men - Sidney Lumet - 8.9
+6- Schindler's List - Steven Spielberg - 8.9
+7- The Lord of the Rings The Return of the King - Peter Jackson - 8.9
+8- Pulp Fiction - Quentin Tarantino - 8.9
+9- The Lord of the Rings The Fellowship of the Ring - Peter Jackson - 8.9
+10- Fight Club - David Fincher - 8.8
+11- Forrest Gump - Robert Zemeckis - 8.8
+12- Inception - Christopher Nolan - 8.8
+13- The Lord of the Rings The Two Towers - Peter Jackson - 8.7
+14- Star Wars Episode V  The Empire Strikes Back - Irvin Kershner - 8.7
+15- The Matrix - Lana Wachowski, Lilly Wachowski - 8.7
+16- Goodfellas - Martin Scorsese - 8.7
+17- One Flew Over the Cuckoo's Nest - Milos Forman - 8.7
+18- Se7en - David Fincher - 8.6
+19- Seven Samurai - Akira Kurosawa - 8.6
+20- City of God - Fernando Meirelles, Kátia Lund - 8.6
+21- The Silence of the Lambs - Jonathan Demme - 8.6
+22- It's a Wonderful Life - Frank Capra - 8.6
+23- Life is Beautiful - Roberto Benigni - 8.6
+24- The Usual Suspects - Bryan Singer - 8.5
+25- Léon The Professional - Luc Besson - 8.5
+26- Spirited Away - Hayao Miyazaki - 8.5
+27- Saving Private Ryan - Steven Spielberg - 8.5
+28- The Green Mile - Frank Darabont - 8.5
+29- Interstellar - Christopher Nolan - 8.5
+30- The Pianist - Roman Polanski - 8.5
+31- The Departed - Martin Scorsese - 8.5
+32- Gladiator - Ridley Scott - 8.5
+33- The Intouchables - Olivier Nakache, Éric Toledano - 8.5
+34- Whiplash - Damien Chazelle - 8.5
+35- The Prestige - Christopher Nolan - 8.5
+36- The Lion King - Roger Allers, Rob Minkoff - 8.5
+37- American History X - Tony Kaye - 8.5
+38- Back to the Future - Robert Zemeckis - 8.5
+39- The Lives of Others - Florian Henckel von Donnersmarck - 8.5
+40- Terminator 2 Judgment Day - James Cameron - 8.5
+41- Cinema Paradiso - Giuseppe Tornatore - 8.5
+42- Psycho - Alfred Hitchcock - 8.5
+43- Grave of the Fireflies - Isao Takahata - 8.5
+44- Modern Times - Charles Chaplin - 8.5
+45- Raiders of the Lost Ark - Steven Spielberg - 8.5
+46- Alien - Ridley Scott - 8.5
+47- Apocalypse Now - Francis Ford Coppola - 8.5
+48- Memento - Christopher Nolan - 8.5
+49- The Great Dictator - Charles Chaplin - 8.5
+50- Sunset Blvd. - Billy Wilder - 8.5

@@ -52,9 +52,9 @@ namespace IMDbTop50
         public static void WatchMovie(List<Movies> list, int select)
         {
             var select2 = list[select - 1];
-            using (StreamWriter sw = new StreamWriter(@"C:\Users\oscar\source\repos\ConsoleApp\IMDbTop50\bin\Debug\net6.0\Txt\WatchedMovies.txt"))
+            using (StreamWriter sw = new StreamWriter(@"C:\Users\oscar\source\repos\EnverKayril\ConsoleApp\IMDbTop50\Txt\WatchedMovies.txt",true))
             {
-                sw.WriteLine($"{select2.sNumber,-10}{select2.movie,-55}{select2.director,-40}{select2.IMDb,-13}", true);
+                sw.WriteLine($"{select2.sNumber,-10}-{select2.movie,-55}-{select2.director,-40}-{select2.IMDb,-13}");
             };
         }
     }

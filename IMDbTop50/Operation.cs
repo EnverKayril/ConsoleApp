@@ -46,8 +46,8 @@ namespace IMDbTop50
                 }
                 else if (select1 == 2)
                 {
-                    List<Movies> movies = GetMovies(Path(select1));
-                    PrintList(movies);
+                    List<Movies> watchedMovies = GetMovies(Path(select1));
+                    PrintList(watchedMovies);
                 }
             }
         }

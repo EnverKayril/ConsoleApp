@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMDbTop50", "IMDbTop50\IMDbTop50.csproj", "{224CDA6C-BEB3-4798-AF2C-59F36755B7C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R&D Store", "R&D Store\R&D Store.csproj", "{F65BD610-DAF4-41EA-A0D4-BDDF17E98BBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "R&D Store", "R&D Store\R&D Store.csproj", "{F65BD610-DAF4-41EA-A0D4-BDDF17E98BBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSProjeDemo1", "CSProjeDemo1\CSProjeDemo1.csproj", "{1A1CE892-589A-4A3E-A1D0-A2D8B80A1271}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F65BD610-DAF4-41EA-A0D4-BDDF17E98BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F65BD610-DAF4-41EA-A0D4-BDDF17E98BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F65BD610-DAF4-41EA-A0D4-BDDF17E98BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1CE892-589A-4A3E-A1D0-A2D8B80A1271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1CE892-589A-4A3E-A1D0-A2D8B80A1271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1CE892-589A-4A3E-A1D0-A2D8B80A1271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1CE892-589A-4A3E-A1D0-A2D8B80A1271}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
