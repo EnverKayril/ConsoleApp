@@ -38,16 +38,33 @@ namespace CSProjeDemo1
 
             return newName;
         }
-        public static void UyeyeKitapVer(Kitap secilenKitap)
+
+        public static void UyeSorgula(List<OduncVerilenKitaplar> liste)
         {
-            if (UyeninAldigiKitaplar.Count > 2)
+            Console.WriteLine("Uye Adı veya Id giriniz: ");
+            string uyeInfo = Console.ReadLine();
+            List<OduncVerilenKitaplar> uyeninKitaplari = new List<OduncVerilenKitaplar>();
+            foreach (var item in liste)
             {
-                Console.WriteLine("Maksimum miktarda kitap aldınız. Daha fazla kitap alamazsınız.");
+                if (item.MemberID == uyeInfo || item.MemberName == uyeInfo)
+                {
+                    uyeninKitaplari.Add(item);
+                }
+            }
+            if (uyeninKitaplari.Count == 0)
+            {
+                Console.WriteLine("Bu üye henüz kitap almadı.");
             }
             else
             {
-            UyeninAldigiKitaplar.Add(secilenKitap);
+                Console.WriteLine($"{"ISBN",-9}{"Kitap Adı",-30}{"Uye Id",-9}{"Uye Adı",-15}{"Soyadı",-15}");
+                foreach (OduncVerilenKitaplar item in uyeninKitaplari)
+                {
+                    Console.WriteLine($"{item.BookId,-9}{item.BookName,-30}{item.MemberID,-9}{item.MemberName,-15}{item.MemberLastName,-15}");
+                }
             }
+
+
         }
 
 

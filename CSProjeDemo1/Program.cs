@@ -90,7 +90,7 @@ namespace CSProjeDemo1
                     Console.WriteLine("Hatalı giriş yaptınız.\n");
                     continue;
                 }
-                if (secim1 < 0 || secim1 > 4)
+                if (secim1 < 0 || secim1 > 5)
                 {
                     Console.WriteLine("Liste dışı seçim yaptınız.\n");
                     continue;
@@ -103,7 +103,6 @@ namespace CSProjeDemo1
                 else if (secim1 == 1)
                 {
                     oduncVerilenKitaplar.Add( OduncVerilenKitaplar.KitapOduncVer(Kutuphane.KitapSec(kitapListesi), Kutuphane.UyeSec(uyeListesi)));
-                    Uye.UyeyeKitapVer(Kutuphane.KitapSec(kitapListesi));
                 }
                 else if (secim2 == 2)
                 {
@@ -115,15 +114,16 @@ namespace CSProjeDemo1
                     Kutuphane.PrintBorrowedBooks(oduncVerilenKitaplar);
                 }
 
+                else if (secim1 == 4)
+                {
+                    Uye.UyeSorgula(oduncVerilenKitaplar);
+                }
+
                 else if (secim1 == 5)
                 {
                     Kutuphane.PrintMember(uyeListesi);
                 }
 
-            }
-            foreach (var item in uyeListesi)
-            {
-                foreach (var item2 in item)
             }
             //        Kutuphane.KitapOduncVer(Kutuphane.KitapSec(kitapListesi),Kutuphane.UyeSec(uyeListesi));
 

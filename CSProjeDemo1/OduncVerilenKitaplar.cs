@@ -27,8 +27,8 @@ namespace CSProjeDemo1
             secilenKitap.Piece--;
             return oduncVerilenKitap;
         }
-        
-        public static OduncVerilenKitaplar KitapIadeAl(Kitap )
+
+        //public static OduncVerilenKitaplar KitapIadeAl()
 
 
     }

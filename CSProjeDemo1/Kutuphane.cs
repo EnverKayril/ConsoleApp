@@ -12,7 +12,7 @@ namespace CSProjeDemo1
     {
         public List<Kitap> booksList { get; set; }
         public List<Uye> memberList { get; set; }
-
+        
 
 
         public static Kitap KitapSec(List<Kitap> bookList)
