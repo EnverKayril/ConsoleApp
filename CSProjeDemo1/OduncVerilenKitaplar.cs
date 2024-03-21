@@ -28,8 +28,36 @@ namespace CSProjeDemo1
             return oduncVerilenKitap;
         }
 
-        //public static OduncVerilenKitaplar KitapIadeAl()
+        public static void KitapIadeAl(List<OduncVerilenKitaplar> oduncKitap, List<Kitap> kitapListesi)
+        {
+            Console.Write("Uye Id giriniz: ");
+            string uyeId = Console.ReadLine();
+            Console.Write("Kitap Id giriniz: ");
+            string kitapId = Console.ReadLine();
 
+            List<OduncVerilenKitaplar> silinecekler = new List<OduncVerilenKitaplar>();
 
+            foreach (var item in oduncKitap)
+            {
+                if (item.MemberID == uyeId && item.BookId == kitapId)
+                {
+                    silinecekler.Add(item);
+                }
+            }
+
+            foreach (var silinecek in silinecekler)
+            {
+                oduncKitap.Remove(silinecek);
+            }
+
+            foreach (var kitap in kitapListesi)
+            {
+                if (kitap.ISBN == kitapId)
+                {
+                    kitap.Piece++;
+                    break;
+                }
+            }
+        }
     }
 }

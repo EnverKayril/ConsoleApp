@@ -67,9 +67,6 @@ namespace CSProjeDemo1
             kutuphane.memberList = uyeListesi;
             kutuphane.booksList = kitapListesi;
 
-            //Kutuphane.PrintMember(kutuphane.memberList);
-            //Kutuphane.PrintBooks(kutuphane.booksList);
-
             Console.WriteLine("Kütüphaneye Hoşgeldiniz\n");
 
             while (isRun)
@@ -104,9 +101,9 @@ namespace CSProjeDemo1
                 {
                     oduncVerilenKitaplar.Add( OduncVerilenKitaplar.KitapOduncVer(Kutuphane.KitapSec(kitapListesi), Kutuphane.UyeSec(uyeListesi)));
                 }
-                else if (secim2 == 2)
+                else if (secim1 == 2)
                 {
-
+                    OduncVerilenKitaplar.KitapIadeAl(oduncVerilenKitaplar, kitapListesi);
                 }
 
                 else if (secim1 == 3)
@@ -123,13 +120,7 @@ namespace CSProjeDemo1
                 {
                     Kutuphane.PrintMember(uyeListesi);
                 }
-
             }
-            //        Kutuphane.KitapOduncVer(Kutuphane.KitapSec(kitapListesi),Kutuphane.UyeSec(uyeListesi));
-
-            //Console.WriteLine("**");
-            //Kutuphane.PrintBooks(kutuphane.booksList);
-            
         }
     }
 }
