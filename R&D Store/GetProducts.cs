@@ -12,7 +12,7 @@ namespace R_D_Store
         public static List<Product> GetProduct()
         {
             List<Product> productList = new List<Product>();
-            string path = @"C:\Users\oscar\source\repos\ConsoleApp\R&D Store\bin\Debug\net6.0\ProductList.txt";
+            string path = @"C:\Users\oscar\OneDrive\Masaüstü\ProductList.txt";
             using (StreamReader sr = new StreamReader(path))
             {
                 while (sr.EndOfStream != true)

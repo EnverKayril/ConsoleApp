@@ -21,16 +21,33 @@ namespace CSProjeDemo1
             MemberName = memberName;
             MemberLastName = memberLastName;
         }
-        public static OduncVerilenKitaplar KitapOduncVer(Kitap secilenKitap, Uye secilenUye)
+        public static OduncVerilenKitaplar KitapOduncVer(Kitap secilenKitap, Uye secilenUye, List<OduncVerilenKitaplar> oduncListesi)
         {
             OduncVerilenKitaplar oduncVerilenKitap = new OduncVerilenKitaplar(secilenKitap.ISBN, secilenKitap.BookName, secilenUye.Id, secilenUye.Name, secilenUye.LastName);
+            if (secilenKitap.Piece == 0)
+            {
+                return null;
+            }
+            List<OduncVerilenKitaplar> geciciListe = new List<OduncVerilenKitaplar>();
+            foreach (var item in oduncListesi)
+            {
+                if (item.MemberID == secilenUye.Id)
+                {
+                    geciciListe.Add(item);
+                } 
+            }
+            if (geciciListe.Count >= 2)
+            {
+                Console.WriteLine($"{secilenUye.Name} 2 kitap almıştır. Daha fazla kitap alamaz.");
+                return null;
+            }
             secilenKitap.Piece--;
             return oduncVerilenKitap;
         }
 
         public static void KitapIadeAl(List<OduncVerilenKitaplar> oduncKitap, List<Kitap> kitapListesi)
         {
-            Console.Write("Uye Id giriniz: ");
+            Console.Write("\nUye Id giriniz: ");
             string uyeId = Console.ReadLine();
             Console.Write("Kitap Id giriniz: ");
             string kitapId = Console.ReadLine();

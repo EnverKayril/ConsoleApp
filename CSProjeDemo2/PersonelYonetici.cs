@@ -17,5 +17,24 @@ namespace CSProjeDemo2
         {
             return (calismaSaati * saatlikUcret) + bonus;
         }
+
+        public static void PrintYoneticiMaaslari(List<Personel> personeller)
+        {
+            Console.WriteLine("YÖNETİCİ LİSTESİ");
+            foreach (Personel personel in personeller)
+            {
+                if (personel is PersonelYonetici)
+                {
+                    PersonelYonetici yonetici = (PersonelYonetici)personel;
+                    Console.WriteLine($"" +
+                        $"Personel İsmi : {yonetici.Ad}\n" +
+                        $"Çalışma Saati : {yonetici.CalismaSaati}\n" +
+                        $"Saatlik Ücret : {yonetici.SaatlikUcret} TL\n" +
+                        $"Bonus         : {yonetici.Bonus} TL\n" +
+                        $"Toplam Ödeme  : {yonetici.MaasHesapla(yonetici.CalismaSaati, yonetici.SaatlikUcret, yonetici.Bonus)} TL\n");
+                }
+            }
+
+        }
     }
 }

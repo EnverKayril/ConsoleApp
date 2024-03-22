@@ -17,28 +17,21 @@ namespace CSProjeDemo2
         {
             get
             {
-                return _Mesai;
-            }
-            set
-            {
                 if (CalismaSaati > 180)
                 {
-                    _Mesai = (CalismaSaati - 180) * (SaatlikUcret * 1.5);
+                    return (CalismaSaati - 180) * SaatlikUcret * 1.5;
                 }
-                else { _Mesai = 0; }
+                else return 0;
             }
         }
         public double SaatlikUcret
         {
             get
             {
-                return _SaatlikUcret;
-            }
-            set
-            {
-                if (Kademe == 1) _SaatlikUcret = 500;
-                else if (Kademe == 2) _SaatlikUcret = 400;
-                else if (Kademe == 3) _SaatlikUcret = 300;
+                if (Kademe == 1) return 500;
+                else if (Kademe == 2) return 400;
+                else if (Kademe == 3) return 300;
+                else return 0;
             }
         }
 
@@ -47,5 +40,45 @@ namespace CSProjeDemo2
             return (calismaSaati * saatlikUcret) + mesai;
         }
 
+        public static void PrintMemurMaaslari(List<Personel> personeller)
+        {
+            Console.WriteLine("MEMUR LİSTESİ");
+            foreach (Personel personel in personeller)
+            {
+                if (personel is PersonelMemur)
+                {
+                    PersonelMemur memur = (PersonelMemur)personel;
+
+                    Console.WriteLine($"" +
+                        $"Personel İsmi : {memur.Ad}\n" +
+                        $"Kademesi      : {memur.Kademe}\n" +
+                        $"Çalışma Saati : {memur.CalismaSaati}\n" +
+                        $"Saatlik Ücret : {memur.SaatlikUcret} TL\n" +
+                        $"Mesai Ücreti  : {memur.Mesai} TL\n" +
+                        $"Toplam Ödeme  : {memur.MaasHesapla(memur.CalismaSaati, memur.SaatlikUcret, memur.Mesai)} TL\n");
+                }
+            }
+        }
+        public static void AzCalisanPersonel(List<Personel> personeller)
+        {
+            Console.WriteLine("\nMEMUR LİSTESİ\n");
+            foreach (Personel personel in personeller)
+            {
+                if (personel is PersonelMemur)
+                {
+                    PersonelMemur memur = (PersonelMemur)personel;
+                    if (memur.CalismaSaati <= 10)
+                    {
+                    Console.WriteLine($"" +
+                        $"Personel İsmi : {memur.Ad}\n" +
+                        $"Kademesi      : {memur.Kademe}\n" +
+                        $"Çalışma Saati : {memur.CalismaSaati}\n" +
+                        $"Saatlik Ücret : {memur.SaatlikUcret} TL\n" +
+                        $"Mesai Ücreti  : {memur.Mesai} TL\n" +
+                        $"Toplam Ödeme  : {memur.MaasHesapla(memur.CalismaSaati, memur.SaatlikUcret, memur.Mesai)} TL\n");
+                    }
+                }
+            }
+        }
     }
 }

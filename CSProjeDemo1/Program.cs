@@ -67,15 +67,16 @@ namespace CSProjeDemo1
             kutuphane.memberList = uyeListesi;
             kutuphane.booksList = kitapListesi;
 
-            Console.WriteLine("Kütüphaneye Hoşgeldiniz\n");
+
+            Console.WriteLine("Kütüphaneye Hoşgeldiniz");
 
             while (isRun)
             {
                 Console.Write(
                     "\nKitap Ödünç vermek için [1]\n" +
-                    "Kitap İadesi almak için [2]\n" +
-                    "Ödünç verilen tüm kitapların sorgulaması [3]\n" +
-                    "Üye Sorgulama için [4]\n" +
+                    "Kitap İade İşlemleri [2]\n" +
+                    "Üye Sorgulama [3]\n" +
+                    "[4]\n" +
                     "Üye Listesi için [5]\n" +
                     "Seçim Yapınız: ");
                 try
@@ -87,7 +88,7 @@ namespace CSProjeDemo1
                     Console.WriteLine("Hatalı giriş yaptınız.\n");
                     continue;
                 }
-                if (secim1 < 0 || secim1 > 5)
+                if (secim1 < 0 || secim1 > 4)
                 {
                     Console.WriteLine("Liste dışı seçim yaptınız.\n");
                     continue;
@@ -99,26 +100,23 @@ namespace CSProjeDemo1
                 }
                 else if (secim1 == 1)
                 {
-                    oduncVerilenKitaplar.Add( OduncVerilenKitaplar.KitapOduncVer(Kutuphane.KitapSec(kitapListesi), Kutuphane.UyeSec(uyeListesi)));
+                    oduncVerilenKitaplar.Add(OduncVerilenKitaplar.KitapOduncVer(Kutuphane.KitapSec(kitapListesi), Kutuphane.UyeSec(uyeListesi),oduncVerilenKitaplar));
                 }
                 else if (secim1 == 2)
                 {
+                    Kutuphane.PrintBorrowedBooks(oduncVerilenKitaplar);
                     OduncVerilenKitaplar.KitapIadeAl(oduncVerilenKitaplar, kitapListesi);
+                    Console.WriteLine("Kitap iade alındı.");
                 }
 
                 else if (secim1 == 3)
                 {
-                    Kutuphane.PrintBorrowedBooks(oduncVerilenKitaplar);
+                    Uye.UyeSorgula(oduncVerilenKitaplar);
                 }
 
                 else if (secim1 == 4)
                 {
-                    Uye.UyeSorgula(oduncVerilenKitaplar);
-                }
-
-                else if (secim1 == 5)
-                {
-                    Kutuphane.PrintMember(uyeListesi);
+                    Kutuphane.PrintBorrowedBooks(oduncVerilenKitaplar);
                 }
             }
         }
